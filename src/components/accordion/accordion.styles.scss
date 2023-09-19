@@ -1,0 +1,81 @@
+:root {
+  --primary-color: #ffd500;
+  --bg-color: #14213d;
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: #14213d;
+  --card-color: #fdf9d7;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.accordion {
+  .title {
+    color: var(--primary-color);
+    font-weight: 900;
+    padding-bottom: 5rem;
+    text-align: center;
+    font-family: "Righteous", cursive;
+    letter-spacing: 0.2rem;
+  }
+
+  .section-container {
+    .single-container {
+      width: 100%;
+      max-width: 360px;
+
+      .heading {
+        font-size: 0.95rem;
+        align-items: center;
+        padding: 1rem;
+        border-radius: 10px;
+        justify-content: space-between;
+        background: var(--primary-color);
+
+        .heading-icon {
+          cursor: pointer;
+          z-index: 100;
+
+          .icon {
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            &:hover {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+
+      .description {
+        font-size: 0.85rem;
+        display: flex;
+        align-items: center;
+        line-height: 23px;
+        white-space: pre-line;
+        height: 0;
+        opacity: 0;
+        padding: 0 1rem;
+        background: var(--card-color);
+        color: var(--black-color);
+        border-radius: 0 0 10px 10px;
+      }
+
+      .show {
+        height: 140px;
+        opacity: 1;
+      }
+
+      .active-title {
+        border-radius: 10px 10px 0 0;
+      }
+    }
+  }
+}
